@@ -1,7 +1,7 @@
-import express from 'express'
+import express , {IRouter} from 'express'
 import postController from '../controllers/posts'
 
-const router = express.Router()
+const router: IRouter = express.Router()
 
 router.route('/').get(postController.getPosts).post(postController.addPost)
 
